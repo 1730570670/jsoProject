@@ -1,6 +1,7 @@
 package com.jsp.eachnet.servlet;
 
 import com.jsp.eachnet.mapper.RepService;
+import com.jsp.eachnet.pojo.EabyProductCategory;
 import com.jsp.eachnet.pojo.EabyShopcar;
 
 import javax.servlet.ServletException;
@@ -29,9 +30,18 @@ public class LoginServlet extends HttpServlet {
             String loginName = req.getParameter("loginName");
             String password = req.getParameter("password");
             //登录验证
-            boolean login = RepService.Login(loginName, password);
+            boolean login = RepService.Login(loginName, password,req);
+            List<EabyProductCategory> category1 = RepService.queryLevelList(1);
+            List<EabyProductCategory> category2 = RepService.queryLevelList(2);
+            List<EabyProductCategory> category3 = RepService.queryLevelList(3);
             //登录成功
             if(login){
+                /*
+                * 商品分类
+                * */
+                session.setAttribute("category1", category1);
+                session.setAttribute("category2", category2);
+                session.setAttribute("category3", category3);
                 /*
                 * 登录的时候将购物车价格,以及数量详细信息放入Session当中
                 * */

@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
     <filter>
         <filter-name>CharEnCdoing</filter-name>
         <filter-class>com.jsp.eachnet.filter.EnCodingFilter</filter-class>
@@ -36,4 +37,31 @@
         <servlet-name>BuyCarServlet</servlet-name>
         <url-pattern>/BuyCarServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MemberProductServlet</servlet-name>
+        <servlet-class>com.jsp.eachnet.servlet.MemberProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MemberProductServlet</servlet-name>
+        <url-pattern>/MemberProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>com.jsp.eachnet.servlet.ProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductServlet</servlet-name>
+        <url-pattern>/ProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RegistServlet</servlet-name>
+        <servlet-class>com.jsp.eachnet.servlet.RegistServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistServlet</servlet-name>
+        <url-pattern>/RegistServlet</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

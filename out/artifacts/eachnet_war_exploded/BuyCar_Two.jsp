@@ -490,7 +490,7 @@
                         </td>
                         <td align="center">颜色：灰色</td>
                         <td align="center">${item.count}</td>
-                        <td align="center" style="color:#ff4e00;">￥${item.price}</td>
+                        <td align="center" style="color:#ff4e00;">￥${item.price*item.count}</td>
                         <td align="center">26R</td>
                     </tr>
                 </c:forEach>
@@ -507,9 +507,9 @@
             <table border="0" class="peo_tab" style="width:1110px;" cellspacing="0" cellpadding="0">
                 <tr>
                     <td class="p_td" width="160">商品名称</td>
-                    <td width="395">海贼王</td>
+                    <td width="395">${sessionScope.user.userName}</td>
                     <td class="p_td" width="160">电子邮件</td>
-                    <td width="395">12345678@qq.com</td>
+                    <td width="395">${sessionScope.user.email}</td>
                 </tr>
                 <tr>
                     <td class="p_td">详细信息</td>
@@ -521,7 +521,7 @@
                     <td class="p_td">电话</td>
                     <td></td>
                     <td class="p_td">手机</td>
-                    <td>18600002222</td>
+                    <td>${sessionScope.user.mobile}</td>
                 </tr>
                 <tr>
                     <td class="p_td">标志建筑</td>
@@ -662,7 +662,7 @@
                             <option value="4">10元</option>
                         </select>
                         <span class="fl" style="margin-left:50px; margin-right:10px;">或者输入红包序列号</span>
-                        <span class="fl"><input type="text" value="" class="c_ipt" style="width:220px;" />
+                        <span class="fl"><input type="text" value="" class="c_ipt" style="width:220px;" /></span>
                     <span class="fr" style="margin-left:10px;"><input type="submit" value="验证红包" class="btn_tj" /></span>
                     </td>
                 </tr>
@@ -689,7 +689,7 @@
                 </tr>
                 <tr height="70">
                     <td align="right">
-                        <b style="font-size:14px;">应付款金额：<span style="font-size:22px; color:#ff4e00;">￥2899</span></b>
+                        <b style="font-size:14px;">应付款金额：<span style="font-size:22px; color:#ff4e00;">￥${sessionScope.priceSum}</span></b>
                     </td>
                 </tr>
                 <tr height="70">
