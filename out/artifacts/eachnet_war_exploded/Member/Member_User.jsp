@@ -83,7 +83,7 @@
                     <td>邮&nbsp; &nbsp; 箱：<span style="color:#555555;">${user.email}</span></td>
                 </tr>
                 <tr>
-                    <td>身份证号：<span style="color:#555555;">522555123456789</span></td>
+                    <td>身份证号：<span style="color:#555555;">${user.email}</span></td>
                     <td>注册时间：<span style="color:#555555;">2015-10-10</span></td>
                 </tr>
             </table>
