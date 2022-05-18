@@ -23,17 +23,17 @@ public class RegistServlet extends HttpServlet {
         try {
             response.setContentType("text/html;charset=utf-8");
             request.setCharacterEncoding("utf-8");
+            //获取参数
             String userName = request.getParameter("userName");
             String password = request.getParameter("password");
             String email = request.getParameter("email");
             String phone = request.getParameter("phone");
-            int regist = RepService.Regist(userName, password, email, phone);
+            int regist = RepService.Regist(userName, password, email, phone);// 注册进行验证(返回的行数)
             List list=new ArrayList();
             Gson gson=new Gson();
-            System.out.println(regist);
             if(regist>0){
                 list.add("添加成功");
-                String s = gson.toJson(list);
+                String s = gson.toJson(list);//将数据转成json格式
                 response.getWriter().println(s);
                 return;
             }

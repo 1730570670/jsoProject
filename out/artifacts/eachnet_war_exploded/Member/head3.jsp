@@ -89,9 +89,9 @@
         <span class="fr">
         	<span class="fl">你好
               <c:if test="${!sessionScope.loginStatus}">
-                  ,请<a href="Login.jsp">登录</a>
+                  ,请<a href="/eachnet/Login.jsp">登录</a>
               </c:if>
-              <a href="Regist.html" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>
+              <a href="/eachnet/Regist.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>
         	<span class="ss">
             	<div class="ss_list">
                 	<a href="#">收藏夹</a>
@@ -139,12 +139,12 @@
 </div>
 <div class="m_top_bg">
     <div class="top">
-        <div class="m_logo"><a href="Index.html"><img src="../images/logo.png" /></a></div>
+        <div class="m_logo"><a href="/eachnet/index.jsp"><img src="../images/logo.png" /></a></div>
         <div class="i_car">
             <div class="car_t">购物车 [ <span>3</span> ]</div>
             <div class="car_bg">
                 <!--Begin 购物车未登录 Begin-->
-                <div class="un_login">还未登录！<a href="Login.html" style="color:#ff4e00;">马上登录</a> 查看购物车！</div>
+                <div class="un_login">还未登录！<a href="Login.jsp" style="color:#ff4e00;">马上登录</a> 查看购物车！</div>
                 <!--End 购物车未登录 End-->
                 <!--Begin 购物车已登录 Begin-->
                 <ul class="cars">

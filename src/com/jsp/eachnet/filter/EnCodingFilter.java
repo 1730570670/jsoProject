@@ -5,8 +5,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class EnCodingFilter implements Filter
-{
+/**
+ * @Author Java小胡
+ */
+public class EnCodingFilter implements Filter {
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 

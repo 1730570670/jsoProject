@@ -91,7 +91,7 @@
               <c:if test="${!sessionScope.loginStatus}">
                   ,请<a href="Login.jsp">登录</a>
               </c:if>
-              <a href="Regist.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>
+              <a href="Regist.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="Member/Member.jsp">我的订单</a>&nbsp;|</span>
         	<span class="ss">
             	<div class="ss_list">
                 	<a href="#">收藏夹</a>
@@ -222,7 +222,7 @@
             </div>
             <!--End 商品分类详情 End-->
             <ul class="menu_r">
-                <li><a href="Index.html">首页</a></li>
+                <li><a href="Index.jsp">首页</a></li>
                 <li><a href="Food.html">美食</a></li>
                 <li><a href="Fresh.html">生鲜</a></li>
                 <li><a href="HomeDecoration.html">家居</a></li>
@@ -393,3 +393,4 @@
                 </div>
             </div>
         </div>
+    </div>

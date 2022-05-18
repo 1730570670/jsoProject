@@ -18,8 +18,8 @@
     <div class="left_m">
         <div class="left_m_t t_bg2">订单中心</div>
         <ul>
-            <li><a href="Member_Order--我的订单.html">我的订单</a></li>
-            <li><a href="Member_OrderList--全部订单.html">全部订单</a></li>
+            <li><a href="/eachnet/OrderServlet">我的订单</a></li>
+            <li><a href="/eachnet/OrderServlet">全部订单</a></li>
         </ul>
     </div>
     <div class="left_m">
@@ -33,7 +33,7 @@
     <div class="left_m">
         <div class="left_m_t t_bg4">资讯中心</div>
         <ul>
-            <li><a href="Member_NewList--资讯列表.html">资讯列表</a></li>
+            <li><a href="/eachnet/NewsServlet">资讯列表</a></li>
         </ul>
     </div>
 </div>

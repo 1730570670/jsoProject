@@ -1,9 +1,6 @@
 package com.jsp.eachnet.mapper;
 
-import com.jsp.eachnet.pojo.EabyProduct;
-import com.jsp.eachnet.pojo.EabyProductCategory;
-import com.jsp.eachnet.pojo.EabyShopcar;
-import com.jsp.eachnet.pojo.EabyUser;
+import com.jsp.eachnet.pojo.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -11,7 +8,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @Author Java小胡
+ */
 public class RepService {
+
     /**
      * 登录
      * @param userName 账号
@@ -48,6 +49,15 @@ public class RepService {
         return false;
     }
 
+    /**
+     *
+     * @param userName 登录名
+     * @param password 密码
+     * @param email 邮箱地址
+     * @param phone 电话号码
+     * @return 返回的数量
+     * @throws Exception
+     */
     public  static int Regist(String userName, String password, String email, String phone) throws Exception{
         Connection conn=BaseDao.getConn();//创建连接
         String sql="INSERT INTO eaby_user (loginName,userName,password,email,mobile)VALUE(?,?,?,?,?)";
@@ -103,12 +113,12 @@ public class RepService {
     /**
      * 根据商品级别，查询对应的商品分类
      * @param type
-     * @return
+     * @return 分类名
      */
     public static List<EabyProductCategory> queryLevelList(int type) throws Exception{
         List<EabyProductCategory> list = new ArrayList<EabyProductCategory>();
 
-        Connection conn = BaseDao.getConn();
+        Connection conn = BaseDao.getConn();//创建连接
         String sql = " select * from eaby_product_category where type = ?";
 
         PreparedStatement pstmt = null;
@@ -137,7 +147,7 @@ public class RepService {
     /**
      * 查询商品详细信息
      * @param name 商品名称
-     * @return 商品值
+     * @return 商品实体
      * @throws Exception
      */
     public static EabyProduct searchProduct(String name) throws Exception{
@@ -156,5 +166,9 @@ public class RepService {
         BaseDao.closeConn(conn,pre,resultSet);//关闭连接
         return product;
     }
+
+
+
+
 
 }

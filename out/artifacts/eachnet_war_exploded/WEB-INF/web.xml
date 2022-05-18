@@ -63,5 +63,20 @@
         <url-pattern>/RegistServlet</url-pattern>
     </servlet-mapping>
 
-
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.jsp.eachnet.servlet.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/OrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>NewsServlet</servlet-name>
+        <servlet-class>com.jsp.eachnet.servlet.NewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewsServlet</servlet-name>
+        <url-pattern>/NewsServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
